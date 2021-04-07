@@ -21,7 +21,7 @@ Requirements:
  
 Installation:  
 
-CCD Linearity is a One-Click application.  Download the "publish" directory and open "setup.exe".
+CCD Linearity is a One-Click application.  Download the zip file in the "publish" directory, open and run "setup.exe".
 
 Support:  
 
