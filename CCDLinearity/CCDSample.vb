@@ -16,8 +16,8 @@
         CCDtotalADU = 0
         CCDmaxpixel = 0
         CCDfluxpersec = 0
-        Dim tsxcc = CreateObject("TheSkyX.ccdsoftCamera")
-        Dim tsxim = CreateObject("TheSkyX.ccdsoftImage")
+        Dim tsxcc = CreateObject("TheSky64.ccdsoftCamera")
+        Dim tsxim = CreateObject("TheSky64.ccdsoftImage")
         tsxcc.Frame = TheSkyXLib.ccdsoftImageFrame.cdLight
         tsxcc.ImageReduction = TheSkyXLib.ccdsoftImageReduction.cdNone
         tsxcc.ExposureTime = exposure
@@ -85,9 +85,9 @@
     End Property
 
     Private Sub SubFrameTenth()
-     
+
         'Set the main camera subframe to a square the size of "value"
-        Dim tsxcc = CreateObject("TheSkyX.ccdsoftCamera")
+        Dim tsxcc = CreateObject("TheSky64.ccdsoftCamera")
         Dim iwidth = tsxcc.WidthInPixels
         Dim iheight = tsxcc.HeightInPixels
         Dim halfsubframeside = iheight / 20

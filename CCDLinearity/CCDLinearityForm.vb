@@ -44,11 +44,11 @@ Public Class CCDLinearityForm
         End If
         'Run a database querey on the star list to get a star of over 80 degrees declination and close to magnitude 9
         StatusUpdate("Running query for star magnitude")
-        Dim tsxdw = CreateObject("TheSkyX.sky6DataWizard")
+        Dim tsxdw = CreateObject("TheSky64.sky6DataWizard")
         tsxdw.path = "C:\Users\" + System.Environment.UserName +
             "\Documents\Software Bisque\TheSkyX Professional Edition\Database Queries\" + starquery
         tsxdw.open()
-        Dim tsxoi = CreateObject("TheSkyX.sky6ObjectInformation")
+        Dim tsxoi = CreateObject("TheSky64.sky6ObjectInformation")
         tsxoi = tsxdw.RunQuery()
         'Look through the list for the first star that is within 0.1 of the target magnitude
         tsxoi.Index = 0
@@ -68,10 +68,10 @@ Public Class CCDLinearityForm
         End If
         'Set connection to star chart and perform a find on M39
         StatusUpdate("Performing CLS to star")
-        Dim tsxsc = CreateObject("TheSkyX.Sky6StarChart")
+        Dim tsxsc = CreateObject("TheSky64.Sky6StarChart")
         tsxsc.Find(starname)
         'Create connection to camera and connect
-        Dim tsxcc = CreateObject("TheSkyX.ccdsoftCamera")
+        Dim tsxcc = CreateObject("TheSky64.ccdsoftCamera")
         tsxcc.Connect()
         'Set the exposure, filter to luminance and reduction, set the camera delay to 0 -- backlash
         ' should be picked up in the mount driver
@@ -81,7 +81,7 @@ Public Class CCDLinearityForm
         tsxcc.Delay = 0
         tsxcc.Subframe = False
         'Create closed loop slew object
-        Dim tsxcls = CreateObject("TheSkyX.ClosedLoopSlew")
+        Dim tsxcls = CreateObject("TheSky64.ClosedLoopSlew")
         'Execute Closed Loop Slew to this target
         Try
             Dim clsstat = tsxcls.exec()
