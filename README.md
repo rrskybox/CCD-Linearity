@@ -1,7 +1,7 @@
 # CCD-Linearity
 Astro-Imaging CCD Linearity Analytic using TheSkyX
 
-CCD Linearity is a camera characterization program that charts the variation of flux per exposure-second accumulated by a camera with respect to time of exposure.  This information is necessary to set optimal flat-field exposure times as they must be exposed within the linearity range of a CCD, but the closer to saturation, the bette
+CCD Linearity is a camera characterization program that charts the variation of flux per exposure-second accumulated by a camera with respect to time of exposure.  This information is necessary to set optimal flat-field exposure times as they must be exposed within the linearity range of a CCD, but the closer to saturation, the better.
 
 This tool provides two functions:  
 
